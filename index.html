@@ -80,21 +80,17 @@
           <i class="bx mr-8 cursor-pointer text-3xl text-primary dark:text-white" @click="themeSwitch()"
             :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"></i>
 
-          <svg width="24" height="15" xmlns="http://www.w3.org/2000/svg" @click="isMobileMenuOpen = true"
-            class="fill-current text-primary dark:text-white">
-            <g fill-rule="evenodd">
-              <rect width="24" height="3" rx="1.5" />
-              <rect x="8" y="6" width="16" height="3" rx="1.5" />
-              <rect x="4" y="12" width="20" height="3" rx="1.5" />
-            </g>
-          </svg>
+          <!-- mobile menu icon -->
+          <a width="24" height="15" @click="isMobileMenuOpen = true" class="fill-current text-primary dark:text-white">
+            <i class="text-4xl text-primary dark:text-white pl-5 hover:text-blue-500 dark:hover:text-blue-500 transition-colors bx bx-menu"></i>
+          </a>
         </div>
 
         <!-- MENU -->
         <div class="hidden lg:block">
           <ul class="flex items-center">
 
-            <li class="group relative mr-6 mb-1">
+            <li class="group relative mr-4 mb-1">
               <div
                 class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
               </div>
@@ -102,15 +98,15 @@
                 class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Intro</a>
             </li>
             
-            <li class="group relative mr-6 mb-1">
+            <li class="group relative mr-4 mb-1">
               <div
                 class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
               </div>
-              <a href="story.html"
-                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Story</a>
+              <!-- <a href="profile.html"
+                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Profile</a> -->
             </li>
 
-            <li class="group relative mr-6 mb-1">
+            <li class="group relative mr-4 mb-1">
               <div
                 class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
               </div>
@@ -118,16 +114,8 @@
                 class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Project</a>
             </li>
 
-            <li class="group relative mr-6 mb-1">
-              <div
-                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
-              </div>
-              <a href="contact.html"
-                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Contact</a>
-            </li>
-
             <li>
-              <i class="bx cursor-pointer text-3xl text-primary dark:text-white" @click="themeSwitch()"
+              <i class="ml-4 bx cursor-pointer text-3xl text-primary dark:text-white" @click="themeSwitch()"
                 :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"></i>
             </li>
           </ul>
@@ -139,7 +127,7 @@
     <div
       class="pointer-events-none fixed inset-0 z-50 flex bg-black bg-opacity-80 opacity-0 transition-opacity lg:hidden"
       :class="isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : ''">
-      <div class="ml-auto w-2/3 bg-green p-4 md:w-1/3">
+      <div class="ml-auto w-2/3 bg-blue-500 p-4 md:w-1/3">
         <i class="bx bx-x absolute top-0 right-0 mt-4 mr-4 text-4xl text-white" @click="isMobileMenuOpen = false"></i>
         <ul class="mt-8 flex flex-col">
 
@@ -147,16 +135,12 @@
             <a href="index.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Intro</a>
           </li>
 
-          <li class="">
-            <a href="story.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Story</a>
-          </li>
+          <!-- <li class="">
+            <a href="profile.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Profile</a>
+          </li> -->
 
           <li class="">
             <a href="project.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Project</a>
-          </li>
-
-          <li class="">
-            <a href="contact.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Contact</a>
           </li>
 
         </ul>
@@ -187,17 +171,41 @@
               new opportunities as UI/UX designer</span>
             again.
           </p>
-          <a href="/"
-            class="mt-12 block bg-blue-500 px-10 py-4 text-center font-body font-semibold text-white transition-colors hover:bg-green sm:inline-block sm:text-left sm:text-xl">
+          <div id="download-cv" class="flex flex-col items-center pt-10 sm:flex-row sm:pt-12">
+            <a href="https://bit.ly/SyafiqPortfolioCV" target="_blank" class="block bg-blue-500 px-10 py-4 text-center font-body font-semibold text-white transition-colors hover:bg-green sm:inline-block sm:text-left sm:text-xl">
             Download CV
-          </a>
+            </a>
+            <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
+
+              <a href="https://www.linkedin.com/in/ibrahimsyafiq15" target="_blank">
+                <i
+                  class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-linkedin"></i>
+              </a>
+    
+              <a href="https://behance.com/ibrahimsyafiq15" target="_blank">
+                <i
+                  class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-behance"></i>
+              </a>
+
+              <a href="https://dribbble.com/ibrahimsyafiq15" target="_blank">
+                <i
+                  class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-dribbble"></i>
+              </a>
+              
+              <a href="https://github.com/ibrahimsyafiq15" target="_blank">
+                <i
+                  class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-github"></i>
+              </a>
+  
+            </div>
+          </div>
         </div>
 
         <div class="border-b border-grey-lighter py-16 lg:py-20">
           <div class="flex items-center pb-6">
             <img src="assets/img/icon-story.png" alt="icon story" />
             <h3 class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
-              My Story
+              Intro
             </h3>
           </div>
           <div>
@@ -213,96 +221,17 @@
           </div>
         </div>
 
-        <!-- BLOG -->
-
-        <div class="py-16 lg:py-20">
-          <div class="flex items-center pb-6">
-            <img src="assets/img/icon-post.png" alt="icon story" />
-            <h3 class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
-              Experience
-            </h3>
-
-          </div>
-          <div class="pt-8">
-
-            <!-- kerja -->
-            <div class="border-b border-grey-lighter pb-8">
-              <div class="flex items-center pt-4">
-                <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">Social Media Designer
-                </p>
-                <a href="http://sit-insanmandiri.sch.id" target="_blank" class="block font-body text-lg font-light text-primary transition-colors dark:text-white pl-2">at SDIT Insan Mandiri Jakarta
-                </a>
-              </div>
-              
-              <span
-                class="mt-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">Mar 2023 - Present</span>
-
-              <p class="pt-4 font-body font-light text-primary dark:text-white">
-                Easy peasy lemon squeezy...
-              </p>
-            </div>
-
-            <!-- kerja -->
-            <div class="border-b border-grey-lighter pb-8">
-              <div class="flex items-center pt-4">
-                <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">UI/UX Designer
-                </p>
-                <a href="https://www.muf.co.id" target="_blank" class="block font-body text-lg font-light text-primary transition-colors dark:text-white pl-2">at Mandiri Utama Finance
-                </a>
-              </div>
-              
-              <span
-                class="mt-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">Dec 2021 - Dec 2022</span>
-
-              <p class="pt-4 font-body font-light text-primary dark:text-white">
-                As an outsource from Indocyber. Work with Business Analyst and stakeholders to understand the business requirements and user needs. Design and deliver mockups and prototypes optimized for mobile and website.
-              </p>
-            </div>
-
-            <!-- kerja -->
-            <div class="border-b border-grey-lighter pb-8">
-              <div class="flex items-center pt-4">
-                <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">UI/UX Designer
-                </p>
-                <a href="http://tetambastudio.com" target="_blank" class="block font-body text-lg font-light text-primary transition-colors dark:text-white pl-2">at Tetamba Studio Kreasi
-                </a>
-              </div>
-              
-              <span
-                class="mt-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">Apr 2020 - Dec 2021</span>
-
-              <p class="pt-4 font-body font-light text-primary dark:text-white">
-                Easy peasy lemon squeezy...
-              </p>
-            </div>
-
-            <!-- kerja -->
-            <div class="border-b border-grey-lighter pb-8">
-              <div class="flex items-center pt-4">
-                <p class="block font-body text-lg font-semibold text-primary transition-colors dark:text-white">UI/UX Lecture Assistant
-                </p>
-                <a href="http://tetambastudio.com" target="_blank" class="block font-body text-lg font-light text-primary transition-colors dark:text-white pl-2">at STT Terpadu Nurul Fikri
-                </a>
-              </div>
-              
-              <span
-                class="mt-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">Feb 2019 - Jul 2019</span>
-
-              <p class="pt-4 font-body font-light text-primary dark:text-white">
-                Easy peasy lemon squeezy...
-              </p>
-            </div>
-
-          </div>
-        </div>
-
         <!-- MY PROJECT -->
-        <div class="pb-16 lg:pb-20">
+        <div class="py-16 lg:py-20">
           <div class="flex items-center pb-6">
             <img src="assets/img/icon-project.png" alt="icon story" />
             <h3 class="ml-3 font-body text-2xl font-semibold text-primary dark:text-white">
               My Projects
             </h3>
+            <a href="project.html" class="flex items-center pl-10 font-body italic text-green transition-colors hover:text-secondary dark:text-green-light dark:hover:text-secondary">
+              All projects
+              <img src="assets/img/long-arrow-right.png" class="ml-3" alt="arrow right"/>
+            </a>
           </div>
           <div>
 
@@ -364,13 +293,18 @@
                   MUF portal is a dashboard that can make it easier for dealers to monitor, track, and order car loans to MUF. 
                 </p>
                 <span class="mt-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">Mandiri Utama Finance</span>
-                <span class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue">Web</span>
+                <span class="mb-4 ml-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue">Web</span>
               </span>
 
               <span class="w-1/10" style="flex-shrink: 0;">
                 <img src="assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
               </span>
             </a>
+
+            
+            <span class="inline-block bg-blue-light px-2 py-1 font-body text-sm text-blue-dark">
+              Roses are red violet are blue. Still making A-Mei-Zing things for you. 😎
+            </span>
 
           </div>
         </div>
@@ -381,30 +315,37 @@
       <div class="flex flex-col items-center justify-between border-t border-grey-lighter py-10 sm:flex-row sm:py-12">
         <div class="mr-auto flex flex-col items-center sm:flex-row">
           <a href="/" class="mr-auto sm:mr-6">
-            <img src="assets/img/logo.svg" alt="logo" />
+            <img src="assets/img/syafiq-favicon.png" width="48px" alt="logo" />
           </a>
           <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
             ©2023 Ibrahim Syafiq.
           </p>
         </div>
+        
         <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
 
-          <a href="https://github.com/ " target="_blank">
-            <i
-              class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-github"></i>
-          </a>
-
-          <a href="https://codepen.io/ " target="_blank">
-            <i
-              class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-codepen"></i>
-          </a>
-
-          <a href="https://www.linkedin.com/ " target="_blank">
+          <a href="https://www.linkedin.com/in/ibrahimsyafiq15" target="_blank">
             <i
               class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-linkedin"></i>
           </a>
 
+          <a href="https://behance.com/ibrahimsyafiq15" target="_blank">
+            <i
+              class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-behance"></i>
+          </a>
+          
+          <a href="https://dribbble.com/ibrahimsyafiq15" target="_blank">
+            <i
+              class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-dribbble"></i>
+          </a>
+
+          <a href="https://github.com/ibrahimsyafiq15" target="_blank">
+            <i
+              class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-github"></i>
+          </a>
+
         </div>
+
       </div>
     </div>
 
