@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-bs-theme="dark">
 
 <head>
   <meta charset="utf-8" />
@@ -56,10 +56,15 @@
 
   <!--Alpine Js V3-->
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body x-data="global()" x-init="themeInit()" :class="isMobileMenuOpen ? 'max-h-screen overflow-hidden relative' : ''"
-  class="dark:bg-primary">
+  class="">
 
   <div id="main">
     <!-- HEADER & MENU -->
@@ -67,21 +72,21 @@
       <div class="flex items-center justify-between py-6 lg:py-10">
 
         <!-- LOGO & TITLE -->
-        <a href="/" class="flex items-center">
+        <a href="/" class="flex items-center text-reset text-decoration-none">
           <span href="/" class="mr-2">
             <img src="assets/img/syafiq-favicon.png" width="48px" alt="logo" />
           </span>
-          <p class="hidden font-body text-2xl font-bold text-primary dark:text-white lg:block">
+          <p class="hidden font-body text-2xl font-bold lg:block">
             ibrahimsyafiq15
           </p>
         </a>
 
         <div class="flex items-center lg:hidden">
-          <i class="bx mr-8 cursor-pointer text-3xl text-primary dark:text-white" @click="themeSwitch()"
+          <i class="bx mr-8 cursor-pointer text-3xl" @click="themeSwitch()"
             :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"></i>
 
-          <a width="24" height="15" @click="isMobileMenuOpen = true" class="fill-current text-primary dark:text-white">
-            <i class="text-4xl text-primary dark:text-white pl-5 hover:text-blue-500 dark:hover:text-blue-500 transition-colors bx bx-menu"></i>
+          <a width="24" height="15" @click="isMobileMenuOpen = true" class="fill-current">
+            <i class="text-4xl pl-5 hover:text-blue-500 transition-colors bx bx-menu"></i>
           </a>
         </div>
 
@@ -94,15 +99,7 @@
                 class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
               </div>
               <a href="index.html"
-                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Intro</a>
-            </li>
-            
-            <li class="group relative mr-4 mb-1">
-              <div
-                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
-              </div>
-              <!-- <a href="profile.html"
-                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Profile</a> -->
+                class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green text-reset text-decoration-none">Intro</a>
             </li>
 
             <li class="group relative mr-4 mb-1">
@@ -110,12 +107,12 @@
                 class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
               </div>
               <a href="project.html"
-                class="relative z-30 block px-2 font-body text-lg font-medium text-primary transition-colors group-hover:text-green dark:text-white dark:group-hover:text-secondary">Project</a>
+                class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green text-reset text-decoration-none">Project</a>
             </li>
 
+            <!-- GANTI TEMA -->
             <li>
-              <i class="ml-4 bx cursor-pointer text-3xl text-primary dark:text-white" @click="themeSwitch()"
-                :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"></i>
+              <i class="ml-4 btn btn-lg bi bi-sun-fill" id="toggleTema"></i>
             </li>
           </ul>
         </div>
@@ -134,10 +131,6 @@
             <a href="index.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Intro</a>
           </li>
 
-          <!-- <li class="">
-            <a href="profile.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Profile</a>
-          </li> -->
-
           <li class="">
             <a href="project.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Project</a>
           </li>
@@ -153,120 +146,184 @@
         <div class="pb-16 lg:pb-20">
           <div class="py-16 lg:py-20">
             <div>
-              <img src="assets/img/icon-project.png" width="36px" alt="icon envelope" />
+              <i class="bi bi-kanban-fill fs-1 text-warning"></i>
             </div>
-            <h1 class="pt-5 mb-3 font-body text-4xl font-semibold text-primary dark:text-white md:text-5xl lg:text-6xl">
+            <h1 class="pt-3 mb-3 bd-title">
               All Projects
             </h1>
             <div class="pr-2 pt-3 sm:pt-0">
-              <p class="font-body text-xl font-light text-primary dark:text-white">
+              <p class="font-body text-xl font-light">
                 All the UI/UX projects I've worked on in my career.
               </p>
             </div>
           </div>
 
+          <!-- CONTENT -->
           <div>
-            <!-- project -->
-            <a href=" / " class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6">
-              <span class="w-">
-                <img src="assets/img/mufkit-thumb.png" class="proj-img" alt="muf kit thumbnail">
-              </span>
+            <!-- CARD PROJECT -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <iframe src="https://www.behance.net/embed/project/154947847?ilo0=1" style="height:200px;width:404px;"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin" class="rounded-3 img-fluid"></iframe>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Human Capital Management System (HCMS)</h5>
+                    <p class="card-text">
+                      HCMS is an application intended employees to take attendance, apply for leave and work trip.
+                    </p>
+                    <span class="badge rounded-pill text-bg-primary">Mandiri Utama Finance</span>
+                    <span class="badge rounded-pill text-bg-info">Mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <span class="ml-4 w-9/10 pr-8">
-                <h4 class="font-body text-lg font-semibold text-primary dark:text-white">
-                  MUF Kit
-                </h4>
-                <p class="font-body font-light text-primary dark:text-white">
-                  Mandiri Utama Finance app used by the Credit Marketing Officer (CMO) to monitor and submit credit contracts from customers.
-                </p>
-                <span class="mt-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">Mandiri Utama Finance</span>
-                <span class="mt-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark">Mobile</span>
-              </span>
+            <!-- CARD PROJECT -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <iframe src="https://www.behance.net/embed/project/154947641?ilo0=1" style="height:200px;width:404px;"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin" class="rounded-3 img-fluid"></iframe>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">MUF Kit</h5>
+                    <p class="card-text">
+                      Mandiri Utama Finance app used by the Credit Marketing Officer (CMO) to monitor and submit credit
+                      contracts from customers.
+                    </p>
+                    <span class="badge rounded-pill text-bg-primary">Mandiri Utama Finance</span>
+                    <span class="badge rounded-pill text-bg-info">Mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <span class="w-1/10" style="flex-shrink: 0;">
-                <img src="assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
-              </span>
-            </a>
+            <!-- CARD PROJECT -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <iframe src="https://www.behance.net/embed/project/154947357?ilo0=1" style="height:200px;width:404px;"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin" class="rounded-3 img-fluid"></iframe>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">MUF Portal</h5>
+                    <p class="card-text">
+                      MUF portal is a dashboard that can make it easier for dealers to monitor, track, and order car
+                      loans to MUF.
+                    </p>
+                    <span class="badge rounded-pill text-bg-primary">Mandiri Utama Finance</span>
+                    <span class="badge rounded-pill text-bg-warning">Web</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <!-- project -->
-            <a href=" / " class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6">
-              <span class="w-">
-                <img src="assets/img/hcms-thumb.png" class="proj-img" alt="muf kit thumbnail">
-              </span>
+            <!-- CARD PROJECT -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <iframe src="https://www.behance.net/embed/project/120671213?ilo0=1" style="height:200px;width:404px;"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin" class="rounded-3 img-fluid"></iframe>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Nufian App</h5>
+                    <p class="card-text">
+                      An information system application to support various student learning needs such as grade
+                      dashboards, class schedules, e-learning, etc.</p>
+                    <span class="badge rounded-pill text-bg-success">Personal Exercise</span>
+                    <span class="badge rounded-pill text-bg-info">Mobile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <span class="ml-4 w-9/10 pr-8">
-                <h4 class="font-body text-lg font-semibold text-primary dark:text-white">
-                  Human Capital Management System (HCMS)
-                </h4>
-                <p class="font-body font-light text-primary dark:text-white">
-                  HCMS is an application intended employees to take attendance, apply for leave and work trip.
-                </p>
-                <span class="mt-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">Mandiri Utama Finance</span>
-                <span class="mt-4 ml-4 inline-block rounded-full bg-yellow-light px-2 py-1 font-body text-sm text-yellow-dark">Mobile</span>
-              </span>
+            <!-- CARD PROJECT -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <iframe src="https://www.behance.net/embed/project/120320335?ilo0=1" style="height:200px;width:404px;"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin" class="rounded-3 img-fluid"></iframe>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Commuter Ticket Machine - Redesign Concept</h5>
+                    <p class="card-text">
+                      Redesigning UI of Commuter Line Ticket Vending Machine.</p>
+                    <span class="badge rounded-pill text-bg-success">Personal Exercise</span>
+                    <span class="badge rounded-pill text-bg-light">Vending Machine</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-              <span class="w-1/10" style="flex-shrink: 0;">
-                <img src="assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
-              </span>
-            </a>
-
-            <!-- project -->
-            <a href=" / " class="mb-6 flex items-center justify-between border border-grey-lighter px-4 py-4 sm:px-6">
-              <span class="w-">
-                <img src="assets/img/muf-portal-thumb.png" class="proj-img" alt="muf kit thumbnail">
-              </span>
-
-              <span class="ml-4 w-9/10 pr-8">
-                <h4 class="font-body text-lg font-semibold text-primary dark:text-white">
-                  MUF Portal
-                </h4>
-                <p class="font-body font-light text-primary dark:text-white">
-                  MUF portal is a dashboard that can make it easier for dealers to monitor, track, and order car loans to MUF. 
-                </p>
-                <span class="mt-4 inline-block rounded-full bg-grey-light px-2 py-1 font-body text-sm text-blue-dark">Mandiri Utama Finance</span>
-                <span class="mb-4 inline-block rounded-full bg-blue-light px-2 py-1 font-body text-sm text-blue">Web</span>
-                <span class="mb-4 inline-block rounded-full bg-green-light px-2 py-1 font-body text-sm text-green">category</span>
-              </span>
-
-              <span class="w-1/10" style="flex-shrink: 0;">
-                <img src="assets/img/chevron-right.png" class="mx-auto" alt="chevron right" />
-              </span>
-            </a>
-
+            <!-- CARD PROJECT -->
+            <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <iframe src="https://www.behance.net/embed/project/111596899?ilo0=1" style="height:200px;width:404px;"
+                    allowfullscreen lazyload frameborder="0" allow="clipboard-write"
+                    refererPolicy="strict-origin-when-cross-origin" class="rounded-3 img-fluid"></iframe>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">I-Kios Indomaret - Redesign Concept</h5>
+                    <p class="card-text">
+                      Redesigning Self-service payment points at Indomaret retail stores that can be used by customers
+                      to make payments such as electricity bills, online shopping payments, and many more.</p>
+                    <span class="badge rounded-pill text-bg-success">Personal Exercise</span>
+                    <span class="badge rounded-pill text-bg-light">Kiosk</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>
 
     <div class="container mx-auto">
       <div class="flex flex-col items-center justify-between border-t border-grey-lighter py-10 sm:flex-row sm:py-12">
-        <div class="mr-auto flex flex-col items-center sm:flex-row">
-          <a href="/" class="mr-auto sm:mr-6">
+        <span class="flex items-center col-sm mb-3 mb-sm-0">
+          <a href="/" class="mr-4">
             <img src="assets/img/syafiq-favicon.png" width="48px" alt="logo" />
           </a>
-          <p class="pt-5 font-body font-light text-primary dark:text-white sm:pt-0">
-            ©2023 Ibrahim Syafiq.
-          </p>
-        </div>
-        <div class="mr-auto flex items-center pt-5 sm:mr-0 sm:pt-0">
-
-          <a href="https://www.linkedin.com/in/ibrahimsyafiq15" target="_blank">
-            <i class="text-4xl text-primary dark:text-white pl-5 hover:text-blue-500 dark:hover:text-blue-500 transition-colors bx bxl-linkedin"></i>
-          </a>
-
-          <a href="https://behance.com/ibrahimsyafiq15" target="_blank">
-            <i class="text-4xl text-primary dark:text-white pl-5 hover:text-blue-500 dark:hover:text-blue-500 transition-colors bx bxl-behance"></i>
-          </a>
-          
-          <a href="https://dribbble.com/ibrahimsyafiq15" target="_blank">
-            <i
-              class="text-4xl text-primary dark:text-white pl-5 hover:text-secondary dark:hover:text-secondary transition-colors bx bxl-dribbble"></i>
-          </a>
-          
-          <a href="https://github.com/ibrahimsyafiq15" target="_blank">
-            <i class="text-4xl text-primary dark:text-white pl-5 hover:text-blue-500 dark:hover:text-blue-500 transition-colors bx bxl-github"></i>
-          </a>
-
+          ©2023 Ibrahim Syafiq.
+        </span>
+        <div class="mr-auto flex items-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/ibrahimsyafiq15" class="text-reset text-decoration-none"
+                target="_blank">
+                <i class="text-4xl pl-5 hover:text-blue-500 transition-colors bx bxl-linkedin"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://behance.com/ibrahimsyafiq15" class="text-reset text-decoration-none" target="_blank">
+                <i class="text-4xl pl-5 hover:text-blue-500 transition-colors bx bxl-behance"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://dribbble.com/ibrahimsyafiq15" class="text-reset text-decoration-none" target="_blank">
+                <i class="text-4xl pl-5 hover:text-secondary transition-colors bx bxl-dribbble"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/ibrahimsyafiq15" class="text-reset text-decoration-none" target="_blank">
+                <i class="text-4xl pl-5 hover:text-blue-500 transition-colors bx bxl-github"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -275,6 +332,30 @@
 
   <script src="assets/js/main.js"></script>
 
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- GANTI TEMA -->
+  <script>
+    const htmlElement = document.querySelector('html');
+    const toggleTemaButton = document.getElementById('toggleTemaButton');
+
+    document.getElementById('toggleTema').addEventListener('click', function () {
+      const currentTheme = htmlElement.getAttribute('data-bs-theme');
+      // console.log(document.getElementById('toggleTema').classList);
+
+      // Ubah tema sesuai dengan keadaan saat ini
+      if (currentTheme === 'dark') {
+        htmlElement.setAttribute('data-bs-theme', 'light');
+        document.getElementById('toggleTema').classList.replace('bi-sun-fill', 'bi-moon-fill');
+      } else {
+        htmlElement.setAttribute('data-bs-theme', 'dark');
+        document.getElementById('toggleTema').classList.replace('bi-moon-fill', 'bi-sun-fill');
+      }
+    });
+  </script>
 </body>
 
 </html>
