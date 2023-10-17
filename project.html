@@ -69,78 +69,29 @@
 
   <div id="main">
     <!-- HEADER & MENU -->
-    <div class="container mx-auto">
-      <div class="flex items-center justify-between py-6 lg:py-10">
-
-        <!-- LOGO & TITLE -->
-        <a href="/" class="flex items-center text-reset text-decoration-none">
-          <span href="/" class="mr-2">
-            <img src="assets/img/syafiq-favicon.png" width="48px" alt="logo" />
-          </span>
-          <p class="hidden font-body text-2xl font-bold lg:block">
-            ibrahimsyafiq15
-          </p>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 fixed-top">
+      <div class="container-fluid">
+        <a style="font-family: 'Poppins', sans-serif;" class="navbar-brand font-bold" href="">
+          <img src="assets/img/syafiq-favicon.png" alt="Logo" width="48" class="mr-2 d-inline-block align-text-center">
+          ibrahimsyafiq15
         </a>
-
-        <div class="flex items-center lg:hidden">
-          <i class="bx mr-8 cursor-pointer text-3xl" @click="themeSwitch()"
-            :class="isDarkMode ? 'bxs-sun' : 'bxs-moon'"></i>
-
-          <a width="24" height="15" @click="isMobileMenuOpen = true" class="fill-current">
-            <i class="text-4xl pl-5 hover:text-blue-500 transition-colors bx bx-menu"></i>
-          </a>
-        </div>
-
-        <!-- MENU -->
-        <div class="hidden lg:block">
-          <ul class="flex items-center">
-
-            <li class="group relative mr-4 mb-1">
-              <div
-                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
-              </div>
-              <a href="index.html"
-                class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green text-reset text-decoration-none">Intro</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" style="font-family: 'Poppins', sans-serif;" href="">Intro</a>
             </li>
-
-            <li class="group relative mr-4 mb-1">
-              <div
-                class="absolute left-0 bottom-0 z-20 h-0 w-full opacity-75 transition-all group-hover:h-2 group-hover:bg-yellow">
-              </div>
-              <a href="project.html"
-                class="relative z-30 block px-2 font-body text-lg font-medium transition-colors group-hover:text-green text-reset text-decoration-none">Project</a>
-            </li>
-
-            <!-- GANTI TEMA -->
-            <li>
-              <i class="ml-4 btn btn-lg bi bi-sun-fill" id="toggleTema"></i>
+            <li class="nav-item">
+              <a class="nav-link active" style="font-family: 'Poppins', sans-serif; font-weight: 500;" aria-current="page" href="project.html">Projects</a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <!-- MOBILE MENU -->
-    <div
-      class="pointer-events-none fixed inset-0 z-50 flex bg-black bg-opacity-80 opacity-0 transition-opacity lg:hidden"
-      :class="isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : ''">
-      <div class="ml-auto w-2/3 bg-blue-500 p-4 md:w-1/3">
-        <i class="bx bx-x absolute top-0 right-0 mt-4 mr-4 text-4xl text-white" @click="isMobileMenuOpen = false"></i>
-        <ul class="mt-8 flex flex-col">
-
-          <li class="">
-            <a href="index.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Intro</a>
-          </li>
-
-          <li class="">
-            <a href="project.html" class="mb-3 block px-2 font-body text-lg font-medium text-white">Project</a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-
-    <div>
+    <div class="mt-5 pt-5 px-5">
       <div class="container mx-auto">
 
         <!-- ALL PROJECT -->
