@@ -69,7 +69,7 @@
 
   <div id="main">
     <!-- HEADER & MENU -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary px-5 fixed-top">
+    <nav class="navbar navbar-expand-lg bg-primary px-5 fixed-top" data-bs-theme="dark">
       <div class="container-fluid">
         <a style="font-family: 'Poppins', sans-serif;" class="navbar-brand font-bold" href="">
           <img src="assets/img/syafiq-favicon.png" alt="Logo" width="48" class="mr-2 d-inline-block align-text-center">
@@ -79,12 +79,15 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item pt-1 pe-2">
               <a class="nav-link active" style="font-family: 'Poppins', sans-serif; font-weight: 500;" aria-current="page" href="">Intro</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item pt-1 pe-2">
               <a class="nav-link" style="font-family: 'Poppins', sans-serif;" href="project.html">Projects</a>
+            </li>
+            <li>
+              <i class="btn btn-lg bi bi-sun-fill" id="toggleTema"></i>
             </li>
           </ul>
         </div>
@@ -172,10 +175,8 @@
             <h3 class="ml-3 mb-0 font-body text-2xl font-semibold col-sm mb-sm-0">
               My Projects
             </h3>
-            <a href="project.html"
-              class="flex items-center pl-10 font-body italic text-green transition-colors hover:text-secondary">
-              All projects
-              <img src="assets/img/long-arrow-right.png" class="ml-3" alt="arrow right" />
+            <a href="project.html" class="btn btn-outline-primary btn-sm rounded-3">
+              All Projects
             </a>
           </div>
           <div>

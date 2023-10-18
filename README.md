@@ -1,31 +1,18 @@
-# Atlas Template
+# Syafiq Portfolio
 
-Thank you for buying this template! We hope you can use it to make your next web project a success!
+## Introduction
 
-Atlas is a premium template styled with TailwindCSS. Other open source libraries were also used to provide the functionality required to make your customization quicker and faster.
+I created this portfolio to display my work in the form of a personal website that refers to other websites where I upload my work such as Behance, Dribbble and others. I built this website starting from the Atlas template by Red Pixel Themes. You can also get the template at the following [link](https://redpixelthemes.com/templates/atlas/).
 
-- [Alpine.js](https://github.com/alpinejs/alpine): A Vue-inspired jQuery alternative that offers you the reactive and declarative nature of big frameworks at a much lower cost.
-- [Boxicons](https://boxicons.com/): A simple vector icons set carefully crafted for designers and developers to use in your next project.
-- [Highlight.js](https://highlightjs.org/): A popular code syntax highlight library, we're also using the "Atom Dark" theme for it.
+Currently I have developed and redesigned the appearance of the template based on [Bootstrap v5.3](https://getbootstrap.com)
 
-We’re also using some Tailwind plugins to extend our config and available classes:
+## Site Map
 
-- [TailwindCSS Forms](https://github.com/tailwindlabs/tailwindcss-forms): This is the official plugin for globally styling form fields, we have added some custom styles too.
-- [TailwindCSS Typography](https://tailwindcss.com/docs/typography-plugin): Official TailwindCSS plugin for styling user-generated content.
+- `Intro` - This is basically the home page, a simplification of all the pages in my portfolio.
 
-## Development Workflow
+- `Projects` - I will publish all the projects that I have worked on and uploaded to various platforms here too. From practice work to projects with various clients during my UI/UX career.
 
-NPM is used for compilation of scripts as well as live reloading when changes are made.
-
-You will need to run `npm install` or `yarn` before starting to work on with the templates.
-
-> Important note: You need Node version 12.13 or higher as per [TailwindCSS' requirements](https://tailwindcss.com/docs/upgrading-to-v2#upgrade-to-node-js-12-13-or-higher)
-
-Two NPM tasks have been configured to help with your development: -`npm run develop` - This runs the development tasks, compiles and listens to changes in the `assets/styles` folder and lastly, activates a [BrowserSync](https://www.browsersync.io/docs/command-line) server for live reloading.
-
-- `npm run build` - This will be used to build your JavaScript/CSS and make them ready for production. It also activates `PurgeCSS` which is used to remove unused CSS classes from your project, providing a smaller bundle size to ensure that your website loads faster.
-
-As always, we recommend you read the [official TailwindCSS docs](https://tailwindcss.com/), they’re the best way to learn Tailwind at the moment.
+- `Gallery` - At the moment I haven't started developing it, but in the future this will become a page where I publish my work other than UI/UX such as logos, posters, etc.
 
 ## Project Structure
 
@@ -39,59 +26,10 @@ The project uses a mostly flat structure with a key folders and files:
 
 Everything else are the HTML templates.
 
-## The Tailwind Config
+## Want To Get To Know Me?
 
-Each of our projects make use of `extend` as much as possible for our tailwind config, but we do override some fo the defaults, like the following:
-
-- `fontFamily`: We tend to add our our fonts here and only use those
-- `screens`: We actually add a smaller `xs` screen for `375px` widths, we think it helps us test for mobile better and we still use the default classes.
-- `colors`: We typically only use our project’s colors and discard the defaults
-
-### How to keep the defaults and our new classes
-
-If you want to keep the default and still use our classes, you just need to move the property you want to change to the inside of `extend`, here’s an example:
-
-Let’s say you want to keep the `fontFamily` classes Tailwind has, here’s how you could change the config to make it happen:
-
-**Original**
-
-```js
-// tailwind.config.js
-module.exports = {
-	...
-	theme: {
-	        fontFamily: {
-	            body: ["Poppins", "sans-serif"]
-	        },
-	}
-	...
-}
-```
-
-**Keep the Tailwind defaults**
-
-```js
-// tailwind.config.js
-module.exports = {
-	...
-	theme: {
-
-	},
-	extend: {
-			fontFamily: {
-	            body: ["Poppins", "sans-serif"]
-	        },
-	}
-	...
-}
-```
-
-That’s it, next time you compile, you’ll have the `font-sans`, `font-serif` and `font-mono` classes available.
-
-### Why we used Alpine.js
-
-We debated a lot on what to use for our first templates since we wanted to start with HTML versions of our designs. The standard that you’ll see all over ThemeForest is jQuery but we think this is a subpar choice for the kind of developer that uses TailwindCSS.
-
-We also thought about using Vue but in practice we found it a bit verbose and a bit limiting because, since we wanted to keep everything in pure HTML, we couldn’t use Vue components.
-
-We opted to try Alpine.js and we think it’s like using the best of Vue, like its syntax and reactivity, without its baggage, like the virtual DOM, which would be overkill for a project like this.
+You can check out my social media
+- [Instagram](https://instagram.com/ibrahimsyafiq15/)
+- [Linkedin](https://www.linkedin.com/in/ibrahimsyafiq15/)
+- [Behance](https://behance.com/ibrahimsyafiq15)
+- [Behance](https://dribbble.com/ibrahimsyafiq15)
