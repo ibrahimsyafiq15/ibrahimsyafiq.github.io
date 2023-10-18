@@ -32,4 +32,4 @@ You can check out my social media
 - [Instagram](https://instagram.com/ibrahimsyafiq15/)
 - [Linkedin](https://www.linkedin.com/in/ibrahimsyafiq15/)
 - [Behance](https://behance.com/ibrahimsyafiq15)
-- [Behance](https://dribbble.com/ibrahimsyafiq15)
+- [Dribbble](https://dribbble.com/ibrahimsyafiq15)
